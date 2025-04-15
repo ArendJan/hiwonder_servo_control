@@ -15,12 +15,12 @@ int main( int argc, char *argv[]) {
     }
     auto curr_id = atoi(argv[1]);
     if(curr_id != id) {
-        std::cout << "The connected servo has not ID " << (int) curr_id << " but ID " << id  << std::endl;
+        std::cout << "The connected servo has not ID " << (int) curr_id << " but ID " << (int)id  << std::endl;
         return 0;
     }
     auto target_pos = atoi(argv[2]);
-    if(target_pos < 0 || target_pos > 2400) {
-        std::cout << "Target position must be between 0 and 2400" << std::endl;
+    if(target_pos < 0 || target_pos > 24000) {
+        std::cout << "Target position must be between 0 and 24000" << std::endl;
         return 0;
     }    
     std::cout << "Moving servo to position " << target_pos << std::endl;

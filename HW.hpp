@@ -707,4 +707,15 @@ public:
     commandOK = true;
     return params[0] | ((uint16_t)params[1] << 8);
   }
+  std::pair<float, float> getVoltageLimits() {
+    uint8_t params[4];
+    if (!_bus->read(HiwonderCommands::VIN_LIMIT_READ, params, 4, _id)) {
+      commandOK = false;
+      return {0, 0};
+    }
+    commandOK = true;
+    uint16_t lower = (params[0] | ((uint16_t)params[1] << 8));
+    uint16_t upper = (params[2] | ((uint16_t)params[3] << 8));
+    return {lower / 1000.0f, upper / 1000.0f};
+  }
 };

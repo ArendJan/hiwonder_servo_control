@@ -10,4 +10,6 @@ add_executable(set_id set_id.cpp HW.cpp)
 add_executable(set_angle set_angle.cpp HW.cpp)
 
 add_executable(get_id get_id.cpp HW.cpp)
-
+add_executable(discover_ids discover_ids.cpp HW.cpp)
+add_executable(get_angle get_angle.cpp HW.cpp)
+add_executable(set_volt set_volt.cpp HW.cpp)
