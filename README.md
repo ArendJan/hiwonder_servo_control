@@ -10,4 +10,4 @@ Doesn't (currently) work with the official Hiwonder boards as they have a buffer
 
 Original source from [madhephaestus/lx16a-servo](https://github.com/madhephaestus/lx16a-servo)
 
-Thanks to @vvannoesel for converting the library to work on Linux.
+Thanks to @[vvannoesel](https://github.com/vvannoesel) for converting the library to work on Linux.
